@@ -20,7 +20,7 @@ body {
 h1, h2, h3, h4, h5, h6 {font-weight: bold;}
 
 h1 {
-	color: #f2f2f2;
+	color: #fff;
 	font-size: 35px;
 	line-height: 40px;
 	margin-bottom: 20px;
@@ -117,7 +117,7 @@ a:active {color: #cc0000;}
 #submit_search {
 	width: 70px;
 	height: 30px;
-	background-color: #333;
+	background-color: #000;
 	border: 0;
 	color: #fff;
 	font-family: "Helvetica", "Arial", sans-serif;
@@ -163,7 +163,7 @@ a:active {color: #cc0000;}
 	}
 
 	.secondary-nav li, .secondary-nav span {
-		background-color: #333;
+		background-color: #000;
 		display: inline-block;
 		float: left;
 		margin: 5px 5px 5px 0;
@@ -190,7 +190,7 @@ a:active {color: #cc0000;}
 
 .pagination ul {float: right;}
 		
-.pagination_current {color: #f2f2f2;}
+.pagination_current {color: #fff;}
 
 /* @end */
 
@@ -283,7 +283,7 @@ div.secondary-nav.exhibit {
 .field, .hTagcloud li, .item-thumbnail, 
 .item-meta, .matted, .no-thumbnail, 
 .none, .view-items-link-browse a, div.exhibit {
-	background-color: #f2f2f2;
+	background-color: #fff;
 	box-shadow: 0px 3px 5px #666;
 		-webkit-box-shadow: 0px 3px 5px #666;
 		-moz-box-shadow: 0px 3px 5px #666;
@@ -397,7 +397,7 @@ div.secondary-nav.exhibit {
 #search-keywords, #search-narrow-by-fields, #search-by-range, #search-selects, .field {margin-bottom: 20px;}
 
 #submit_search_advanced, #advanced-search-form button {
-	background-color: #333;
+	background-color: #000;
 	border: 0 !important;
 	color: #cc0000;
 	cursor: pointer;
@@ -604,7 +604,7 @@ div.exhibit {
 	}
 
 	#footer li, #footer p {
-		background-color: #333;
+		background-color: #000;
 		display: inline;
 		padding: 10px;
 		}
