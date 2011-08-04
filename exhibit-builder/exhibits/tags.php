@@ -5,6 +5,7 @@
 	<?php echo nav(array('Browse All' => uri('exhibits/browse'), 'Browse by Tag' => uri('exhibits/tags'))); ?>
 </ul>
 
-<?php echo tag_cloud($tags,uri('exhibits/browse')); ?>
+<div class="tags"><?php echo tag_cloud($tags,uri('exhibits/browse')); ?></div>
+
 </div>
 <?php foot(); ?>
