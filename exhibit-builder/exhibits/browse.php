@@ -3,11 +3,15 @@
     <h1>Browse Exhibits (<?php echo $total_records; ?> total)</h1>
 	<?php if (count($exhibits) > 0): ?>
 	
-	<ul class="navigation" id="secondary-nav">
-	    <?php echo nav(array('Browse All' => uri('exhibits'), 'Browse by Tag' => uri('exhibits/tags'))); ?>
-    </ul>	
+	<div class="secondary-nav top">
+
+		<ul class="navigation">
+		    <?php echo nav(array('Browse All' => uri('exhibits'), 'Browse by Tag' => uri('exhibits/tags'))); ?>
+	    </ul>	
 	
-    <div class="pagination"><?php echo pagination_links(); ?></div>
+    	<div class="pagination"><?php echo pagination_links(); ?></div>
+
+    </div>
 	
     <div id="exhibits">	
     <?php $exhibitCount = 0; ?>
@@ -26,5 +30,16 @@
     <?php else: ?>
 	<p class="none">There are no exhibits available yet.</p>
 	<?php endif; ?>
+
+	<div class="secondary-nav bottom">
+
+		<ul class="navigation">
+		    <?php echo nav(array('Browse All' => uri('exhibits'), 'Browse by Tag' => uri('exhibits/tags'))); ?>
+	    </ul>	
+	
+    	<div class="pagination"><?php echo pagination_links(); ?></div>
+
+    </div>	
+	
 </div>
 <?php foot(); ?>

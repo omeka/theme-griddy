@@ -4,11 +4,15 @@
 		
 		<h1>Browse Items (<?php echo total_results(); ?> total)</h1>
 		
-		<ul class="items-nav navigation" id="secondary-nav-top">
-			<?php echo nav(array('Browse All' => uri('items'), 'Browse by Tag' => uri('items/tags'))); ?>
-		</ul>
+		<div class="secondary-nav">
 		
-		<div id="pagination-top" class="pagination"><?php echo pagination_links(); ?></div>
+			<ul class="top">
+				<?php echo nav(array('Browse All' => uri('items'), 'Browse by Tag' => uri('items/tags'))); ?>
+			</ul>
+		
+			<div id="pagination-top" class="pagination"><?php echo pagination_links(); ?></div>
+		
+		</div>
 		
 		<?php while (loop_items()): ?>
 			<div class="item hentry">
@@ -45,11 +49,15 @@
 			</div><!-- end class="item hentry" -->			
 		<?php endwhile; ?>
 
-		<ul class="items-nav navigation" id="secondary-nav-bottom">
+		<div class="secondary-nav bottom">
+		
+		<ul class="items-nav">
 			<?php echo nav(array('Browse All' => uri('items'), 'Browse by Tag' => uri('items/tags'))); ?>
 		</ul>
 	
 		<div id="pagination-bottom" class="pagination"><?php echo pagination_links(); ?></div>
+		
+		</div>
 		
 		<?php echo plugin_append_to_items_browse(); ?>
 			

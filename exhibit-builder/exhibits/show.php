@@ -1,6 +1,6 @@
 <?php head(array('title' => html_escape(exhibit('title') . ' : '. exhibit_page('title')), 'bodyid'=>'exhibit','bodyclass'=>'show')); ?>
 
-<div id="secondary-nav" class="exhibit">
+<div class="secondary-nav exhibit">
 	<?php echo exhibit_builder_page_nav();?>
 </div>
 
@@ -16,9 +16,9 @@
 	
 </div>	
 
-	<div id="exhibit-page-navigation">
-	   	<?php echo exhibit_builder_link_to_previous_exhibit_page(); ?>
-    	<?php echo exhibit_builder_link_to_next_exhibit_page(); ?>
+	<div id="exhibit-page-navigation" class="secondary-nav bottom">
+	   	<span><?php echo exhibit_builder_link_to_previous_exhibit_page(); ?></span>
+    	<span><?php echo exhibit_builder_link_to_next_exhibit_page(); ?></span>
 	</div>
 	
 <?php foot(); ?>

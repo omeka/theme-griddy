@@ -32,7 +32,7 @@
 		<div class="items-list">
 			<?php while (loop_items()): ?>
 			    
-			<div class="home-item">
+			<div class="home-item matted">
 				
 				<?php if (item_has_thumbnail()): ?>
     				<div class="item-img">
