@@ -6,11 +6,11 @@
 
 body {
 	background: url(../images/bg.jpg) no-repeat center center fixed;
+	background-size: cover;	
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
     background-color: #666;
-	background-size: cover;
 	color: #333;
 	font-family: "Helvetica", "Arial", sans-serif;
 	}
@@ -323,7 +323,7 @@ div.secondary-nav.exhibit {
 	line-height: 20px;
 	float: left;
 	margin: 0 20px 20px 0;
-	padding: 20px 20px 0 20px;
+	padding: 20px;
 	}
 
 #featured-collection, #featured-item {
@@ -369,6 +369,7 @@ div.secondary-nav.exhibit {
 		overflow: auto;
 		padding: 10px 20px;
 		}
+
 
 /* @end */
 
