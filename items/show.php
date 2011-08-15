@@ -21,6 +21,9 @@
 		</ul>
 	
 	</div>
+
+	<!--  The following function prints all the the metadata associated with an item: Dublin Core, extra element sets, etc. See http://omeka.org/codex or the examples on items/browse for information on how to print only select metadata fields. -->
+	<?php echo show_item_metadata(); ?>
 	
 	<!-- If the item belongs to a collection, the following creates a link to that collection. -->
 	<?php if ( item_belongs_to_collection() ): ?>
@@ -47,13 +50,10 @@
 	<!-- The following returns all of the files associated with an item. -->
 	<div id="itemfiles" class="element">
 	    <h2>Files</h2>
-		<div class="element-text"><p><?php echo display_files_for_item(); ?></p></div>
+		<div class="element-text"><?php echo display_files_for_item(); ?></div>
 	</div>
 	
-	<?php echo plugin_append_to_items_show(); ?>
-	
-	<!--  The following function prints all the the metadata associated with an item: Dublin Core, extra element sets, etc. See http://omeka.org/codex or the examples on items/browse for information on how to print only select metadata fields. -->
-	<?php echo show_item_metadata(); ?>
+	<div id="extras"><?php echo plugin_append_to_items_show(); ?></div>
 	
 </div><!-- end primary -->
 

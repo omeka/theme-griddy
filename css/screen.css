@@ -39,7 +39,7 @@ h3 {
 
 /* -- Misc Block elements -- */
 
-p {
+p, form {
 	font-size: 14px;
 	line-height: 20px;
 	margin-bottom: 20px;
@@ -48,6 +48,10 @@ p {
 li, label {
 	font-size: 14px;
 	line-height: 20px;
+	}
+	
+form {
+	overflow: auto;
 	}
 
 blockquote {margin: 20px;}
@@ -273,14 +277,18 @@ div.secondary-nav.exhibit {
 	padding: 20px 10px;
 	}
 
+.clear {
+	clear: both;
+	}
+
 #primary h1 {clear: both;}
 
 #collection, #collection-description, #featured-collection, 
-#featured-item, #item-citation, #itemfiles img, 
+#extras, #featured-item, #item-citation,
 #itemfiles h2, #item-tags, #item-title,
 #primary-content, #primary-nav, #recent-items-head,
 #section-nav ul, .collection, .element-set, 
-.field, .hTagcloud li, .item-thumbnail, 
+.search-field, .hTagcloud li, .item-file, .item-thumbnail, 
 .item-meta, .matted, .no-thumbnail, 
 .none, .view-items-link-browse a, div.exhibit,
 .tagcloud p {
@@ -289,6 +297,13 @@ div.secondary-nav.exhibit {
 		-webkit-box-shadow: 0px 3px 5px #666;
 		-moz-box-shadow: 0px 3px 5px #666;
 	margin-bottom: 20px;
+	}
+	
+#extras {
+	width: 420px;
+	display: inline-block;
+	margin-left: 20px;
+	padding: 20px;
 	}
 	
 .hentry {clear: both;}
@@ -377,7 +392,7 @@ div.secondary-nav.exhibit {
 /* @group Search 
 --------------------------------------*/
 
-.field {
+.search-field {
 	width: 440px;
 	float: left;
 	padding: 10px;
@@ -402,7 +417,7 @@ div.secondary-nav.exhibit {
 	
 #search-keywords, #search-narrow-by-fields, #search-by-range, #search-selects, .field {margin-bottom: 20px;}
 
-#submit_search_advanced, #advanced-search-form button {
+#submit_search_advanced, #advanced-search-form button, input[type=submit] {
 	background-color: #000;
 	border: 0 !important;
 	color: #cc0000;
@@ -417,7 +432,7 @@ div.secondary-nav.exhibit {
 		padding: 10px;
 		}
 	
-	#advanced-search-form button {
+	#advanced-search-form button, input[type=submit] {
 		margin-top: 10px;
 		padding: 5px;
 		}
@@ -432,6 +447,8 @@ div.secondary-nav.exhibit {
 
 .element-set {
 	width: 420px;
+	clear: left;
+	float: left;
 	overflow: auto;
 	padding: 20px 20px 0 20px;
 	}
@@ -444,8 +461,24 @@ div.secondary-nav.exhibit {
 	}
 
 .items-list {
-		width: 480px;
-		overflow: auto;
+	width: 480px;
+	overflow: auto;
+	}
+
+.item-file {
+	width: 120px;
+	float: left;
+	margin: 0 0 20px 20px;
+	padding: 10px;
+	text-align: center;
+	}
+	
+	.application-pdf, .application-msword, .application-octet-stream,
+	.application-zip, .text-plain {
+		height: 70px;
+		background: url('../images/document.png') no-repeat;
+		background-color: #f2f2f2;
+		padding-top: 60px;
 		}
 		
 .item-thumbnail {
@@ -455,8 +488,8 @@ div.secondary-nav.exhibit {
 	}
 		
 	.item-thumbnail img {
-		max-width: 120px;
-		max-height: 120px;
+		width: 120px;
+		height: 120px;
 		}
 			
 	.item-thumbnail a {
@@ -482,25 +515,28 @@ div.secondary-nav.exhibit {
 	
 .title-list	 {display: inline;}
 			
-#itemfiles h2, #collection, #item-citation, #item-tags {
+#itemfiles h2, #collection, #item-citation, #item-tags, #itemfiles {
 	width: 420px;
-	float: right;
+	display: inline-block;
 	margin: 0 0 20px 20px;
 	padding: 20px 20px 0 20px;
 	}
 			
-	#itemfiles {float: right;}
+	#itemfiles {
+		width: 480px;
+		padding: 0;
+		margin: 0;
+		}
 	
 	#itemfiles img {
-		max-width: 120px;
+		width: 120px;
 		float: left;
-		margin: 0 0 20px 20px;
-		padding: 10px;
 		}
 		
 	#itemfiles h2 {
 		width: 420px;
 		padding: 10px 20px;
+		margin-left: 20px;
 		}
 
 .no-thumbnail {

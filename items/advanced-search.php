@@ -14,13 +14,13 @@ head(array('title'=>'Advanced Search', 'bodyclass' => 'advanced-search', 'bodyid
 <form <?php echo _tag_attributes($formAttributes); ?> action="<?php echo html_escape($formActionUri); ?>" method="get">
 	
 	<div id="column-1">
-	<div id="search-keywords" class="field">    
+	<div id="search-keywords" class="search-field">    
 		<?php echo label('keyword-search','Search for Keywords'); ?>
 		<div class="inputs">
 		<?php echo text(array('name'=>'search','size' => '40','id'=>'keyword-search','class'=>'textinput'),$_REQUEST['search']); ?>
 		</div>
 	</div>
-	<div id="search-narrow-by-fields" class="field">
+	<div id="search-narrow-by-fields" class="search-field">
 	
 		<div class="label">Narrow by Specific Fields</div>
 		
@@ -69,7 +69,7 @@ head(array('title'=>'Advanced Search', 'bodyclass' => 'advanced-search', 'bodyid
 			<button type="button" class="add_search">Add a Field</button>
 		</div>
 		
-		<div id="search-by-range" class="field">
+		<div id="search-by-range" class="search-field">
 		    <label for="range">Search by a range of ID#s (example: 1-4, 156, 79)</label>
 			<div class="inputs">
 			<?php echo text(
@@ -79,14 +79,14 @@ head(array('title'=>'Advanced Search', 'bodyclass' => 'advanced-search', 'bodyid
 		</div>
 		
 	<?php if (has_permission('Items','showNotPublic')): ?>
-	<div class="field">
+	<div class="search-field">
 		<?php echo label('public','Public/Non-Public'); ?>
 		<div class="inputs">
 		    <?php echo select(array('name' => 'public', 'id' => 'public'), array('1' => 'Only Public Items', '0' => 'Only Non-Public Items')); ?>
 	    </div>
 	</div>
 	
-	<div class="field">
+	<div class="search-field">
 		<?php echo label('featured','Featured/Non-Featured'); ?>
 		<div class="inputs">
 		    <?php echo select(array('name' => 'featured', 'id' => 'featured'), array('1' => 'Only Featured Items', '0' => 'Only Non-Featured Items')); ?>
@@ -97,24 +97,24 @@ head(array('title'=>'Advanced Search', 'bodyclass' => 'advanced-search', 'bodyid
 	</div>
 	
     <div id="column-2">
-	<div class="field">
+	<div class="search-field">
 	<?php echo label('collection-search', 'Search By Collection'); ?>
 	<div class="inputs"><?php echo select_collection(array('name'=>'collection', 'id'=>'collection-search'), $_REQUEST['collection']); ?></div>
 	</div>
-	<div class="field">
+	<div class="search-field">
 	<?php echo label('item-type-search', 'Search By Type'); ?>
 	<div class="inputs"><?php echo select_item_type(array('name'=>'type', 'id'=>'item-type-search'), $_REQUEST['type']); ?></div>
 	</div>
 	
 	<?php if(has_permission('Users', 'browse')): ?>
-	<div class="field">
+	<div class="search-field">
 	<?php 			
 	    echo label('user-search', 'Search By User');?>
 	<div class="inputs"><?php echo select_user(array('name'=>'user', 'id'=>'user-search'), $_REQUEST['user']);
 	?></div>
 	</div>
 	<?php endif; ?>
-	<div class="field">
+	<div class="search-field">
 	<?php echo label('tag-search', 'Search By Tags'); ?>
 	<div class="inputs"><?php echo text(array('name'=>'tags','size' => '40','id'=>'tag-search','class'=>'textinput'),$_REQUEST['tags']); ?></div>
 	</div>
