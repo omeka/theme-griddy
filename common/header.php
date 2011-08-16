@@ -13,9 +13,11 @@
 <!-- Stylesheets -->
 <link rel="stylesheet" media="screen" href="<?php echo html_escape(css('screen')); ?>" />
 <link rel="stylesheet" media="print" href="<?php echo html_escape(css('print')); ?>" />
+<link rel="stylesheet" href="<?php echo html_escape(css('formalize')); ?>" />
 
 <!-- JavaScripts -->
 <?php echo js('default'); ?>
+<?php echo js('jquery.formalize'); ?>
 
 <!-- Plugin Stuff -->
 <?php echo plugin_header(); ?>

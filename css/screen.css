@@ -127,7 +127,7 @@ a:active {color: #cc0000;}
 	font-family: "Helvetica", "Arial", sans-serif;
 	font-weight: bold;
 	margin: 5px 0;
-	padding: 0;
+	padding: 9px 0;
 	text-transform: uppercase;
 	}
 
@@ -306,6 +306,8 @@ div.secondary-nav.exhibit {
 	padding: 20px;
 	}
 	
+	div:empty#extras { display: none; }
+	
 .hentry {clear: both;}
 
 .tagcloud p {
@@ -393,9 +395,9 @@ div.secondary-nav.exhibit {
 --------------------------------------*/
 
 .search-field {
-	width: 440px;
+	width: 420px;
 	float: left;
-	padding: 10px;
+	padding: 20px;
 	}
 		
 #column-1, #column-2 {
@@ -405,15 +407,18 @@ div.secondary-nav.exhibit {
 	
 	#column-2 {margin-left: 20px;}
 		
-#advanced-search-form .textinput {
-	width: 97%;
-	height: 8px;
+#advanced-search-form input[type=text] {
+	width: 100%;
+	height: 20px;
 	border: 1px solid #ccc;
 	margin: 10px 0;
 	padding: 5px;
 	}
 	
-#advanced-search-form select, #advanced-search-form button {margin: 10px 0;}
+#advanced-search-form select, #advanced-search-form button {
+	height: 20px;
+	margin: 10px 0;
+	}
 	
 #search-keywords, #search-narrow-by-fields, #search-by-range, #search-selects, .field {margin-bottom: 20px;}
 
@@ -434,8 +439,17 @@ div.secondary-nav.exhibit {
 	
 	#advanced-search-form button, input[type=submit] {
 		margin-top: 10px;
-		padding: 5px;
+		padding: 4px 10px;
 		}
+
+.contribution label, .contribution select, .contribution input[type="text"] {
+	height: 20px;
+	margin-top: -4px;
+	}
+
+.contribution textarea {
+	height: 300px;
+	}
 
 /* @end */
 
