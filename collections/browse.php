@@ -1,6 +1,6 @@
 <?php head(array('title'=>'Browse Collections','bodyid'=>'collections','bodyclass' => 'browse')); ?>
-	<h1>Collections</h1>
 <div id="primary">
+	<h1>Collections</h1>
     <div class="pagination secondary-nav"><?php echo pagination_links(); ?></div>
 		<?php while (loop_collections()): ?>
 

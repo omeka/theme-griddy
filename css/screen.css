@@ -516,6 +516,8 @@ div.secondary-nav.exhibit {
 	float: left;
 	padding: 20px 20px 0 ;
 	}
+	
+	 .item-meta h2:last-child {margin-bottom:20px;}
 
 #item-title {
 	clear: both;

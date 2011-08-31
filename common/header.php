@@ -1,34 +1,41 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en-us">
 <head>
-<title><?php echo settings('site_title'); echo $title ? ' | ' . $title : ''; ?></title>
+<title><?php echo settings('site_title'); echo $title ? ' | ' . strip_formatting($title) : ''; ?></title>
 
 <!-- Meta -->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
 <meta name="description" content="<?php echo settings('description'); ?>" />
 
 <?php echo auto_discovery_link_tag(); ?>
 
+<!-- Plugin Stuff -->
+<?php plugin_header(); ?>
+
 <!-- Stylesheets -->
-<link rel="stylesheet" media="screen" href="<?php echo html_escape(css('screen')); ?>" />
-<link rel="stylesheet" media="print" href="<?php echo html_escape(css('print')); ?>" />
-<link rel="stylesheet" href="<?php echo html_escape(css('formalize')); ?>" />
+<?php
+queue_css(array('screen', 'formalize'), 'screen');
+queue_css('print', 'print');
+display_css();
+?>
+<?php griddy_custom_background(); ?>
 
 <!-- JavaScripts -->
-<?php echo js('default'); ?>
-<?php echo js('jquery.formalize'); ?>
-
-<!-- Plugin Stuff -->
-<?php echo plugin_header(); ?>
+<?php 
+queue_js('jquery.formalize'); 
+display_js();
+?>
 
 </head>
-<body<?php echo $bodyid ? ' id="'.$bodyid.'"' : ''; ?><?php echo $bodyclass ? ' class="'.$bodyclass.'"' : ''; ?>>
+
+<?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
+
+<?php plugin_body(); ?>
 
 <div id="wrap">
 
 	<div id="header">
-	
+		<?php plugin_page_header(); ?>	
 		<div id="search-wrap">
 			<?php echo link_to_advanced_search(); ?>
 			<?php echo simple_search(); ?>
@@ -45,3 +52,4 @@
 	</div><!-- end primary-nav -->
 
 <div id="content">
+<?php plugin_page_content(); ?>

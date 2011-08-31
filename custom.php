@@ -41,3 +41,20 @@
     }
     return $html;
 }
+
+function griddy_custom_background()
+{
+	if(function_exists('get_theme_option') && $bgimage = get_theme_option('Background Image')) {
+		$storage = Zend_Registry::get('storage');
+        $bgimage_url = $storage->getUri($storage->getPathByType($bgimage, 'theme_uploads'));
+        $html = <<<CSS
+<style type="text/css" media="screen">
+body {
+	background: url($bgimage_url) no-repeat center center fixed;
+	}
+</style>
+CSS;
+        echo $html;
+		}
+
+}
