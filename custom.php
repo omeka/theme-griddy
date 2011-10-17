@@ -4,7 +4,7 @@
 // designed for portability across themes should be grouped into a plugin whenever
 // possible.
 
- function griddy_display_random_featured_item($withImage=false)
+ function griddy_display_random_featured_item($withImage=null)
  {
     $featuredItem = random_featured_item($withImage);
  	$html = '<h2>Featured Item</h2>';
