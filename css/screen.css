@@ -299,6 +299,11 @@ div.secondary-nav.exhibit {
 	margin-bottom: 20px;
 	}
 	
+#right {
+	width: 480px;
+	display: inline-block;
+	}
+	
 #extras {
 	width: 420px;
 	display: inline-block;

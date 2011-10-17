@@ -48,12 +48,14 @@
 	</div>
 	
 	<!-- The following returns all of the files associated with an item. -->
+	<div id="right">
 	<div id="itemfiles" class="element">
 	    <h2>Files</h2>
 		<div class="element-text"><?php echo display_files_for_item(); ?></div>
 	</div>
 	
 	<div id="extras"><?php echo plugin_append_to_items_show(); ?></div>
+	</div>
 	
 </div><!-- end primary -->
 
