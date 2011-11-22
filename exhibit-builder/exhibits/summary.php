@@ -11,8 +11,10 @@
 <h2>Description</h2>
 <?php echo exhibit('description'); ?>
 
+<?php if (exhibit('credits')) { ?>
 <h2>Credits</h2>
 <p><?php echo html_escape(exhibit('credits')); ?></p>
+<?php } ?>
 
 <div id="exhibit-sections">	
 	<?php set_exhibit_sections_for_loop_by_exhibit(get_current_exhibit()); ?>

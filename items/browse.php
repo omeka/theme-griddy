@@ -6,7 +6,7 @@
 		
 		<div class="secondary-nav">
 		
-			<ul class="top">
+			<ul class="navigation top">
 				<?php echo nav(array('Browse All' => uri('items'), 'Browse by Tag' => uri('items/tags'))); ?>
 			</ul>
 		
@@ -51,7 +51,7 @@
 
 		<div class="secondary-nav bottom">
 		
-		<ul class="items-nav">
+		<ul class="navigation items-nav">
 			<?php echo nav(array('Browse All' => uri('items'), 'Browse by Tag' => uri('items/tags'))); ?>
 		</ul>
 	

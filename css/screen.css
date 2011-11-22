@@ -13,6 +13,8 @@ body {
     background-color: #666;
 	color: #333;
 	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 20px;
 	}
 
 /* -- Headings -- */
@@ -44,17 +46,24 @@ p, form {
 	line-height: 20px;
 	margin-bottom: 20px;
 	}
-	
-li, label {
-	font-size: 14px;
-	line-height: 20px;
+
+ol,ul,dl {
+	margin: 0 0 1em 2em;
 	}
+	
+ol li {
+	list-style: decimal outside;	
+	}
+	
+ul li {
+	list-style: disc outside;
+	}	
 	
 form {
 	overflow: auto;
 	}
 
-blockquote {margin: 20px;}
+blockquote { margin: 20px; }
 	
 /* -- Misc Inline elements -- */
 	
@@ -133,6 +142,10 @@ a:active {color: #cc0000;}
 
 /* @group Primary Navigation classes */
 
+.navigation {
+	margin: 0;
+	}
+
 #primary-nav {
 	height: 40px;
 	font-size: 14px;
@@ -148,6 +161,8 @@ a:active {color: #cc0000;}
 		height: 20px;
 		border-right: 1px solid #999;
 		float: left;
+		list-style-type: none;
+		margin: 0;
 		padding: 10px 20px;
 		}
 
@@ -322,6 +337,7 @@ div.secondary-nav.exhibit {
 
 .hTagcloud ul {
 	width: 960px;
+	margin: 0;
 	overflow: hidden;
 	}
 	
@@ -329,7 +345,7 @@ div.secondary-nav.exhibit {
 		width: 120px;
 		display: inline-block;
 		float: left;
-		margin-right: 20px;
+		margin: 0 20px 20px 0;
 		padding: 10px;
 		text-align: center;
 		}
@@ -499,6 +515,14 @@ div.secondary-nav.exhibit {
 		background-color: #f2f2f2;
 		padding-top: 60px;
 		}
+
+.title-list {
+	margin: 0;
+	}
+
+.item-title {
+	list-style-type: none;
+	}
 		
 .item-thumbnail {
 	float: left;
@@ -652,6 +676,11 @@ div.exhibit {
 .exhibit p:empty {display: none;}
 
 .exhibit-description {overflow: auto;}
+
+.exhibit-section-nav li { 
+	list-style-type: none;
+	margin: 0; 
+	}
 
 /* @end */
 

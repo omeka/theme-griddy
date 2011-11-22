@@ -4,7 +4,7 @@
 	
 	<h1>Browse Items</h1>
 	
-	<ul class="secondary-nav top">
+	<ul class="navigation secondary-nav top">
 	<?php echo nav(array('Browse All' => uri('items/browse'), 'Browse by Tag' => uri('items/tags'))); ?>
 	</ul>
 
